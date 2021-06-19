@@ -1,9 +1,11 @@
 const express = require('express');
+var cors = require('cors')
 const app = express();
 const morgan = require('morgan');
 //const cors=require('cors');
 require('./database')
 
+app.use(cors())
 //Settings 
 app.set('port', process.env.PORT || 4000)
 
